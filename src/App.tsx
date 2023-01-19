@@ -40,7 +40,13 @@ function App() {
           <div>
             {person.name === "Cristina Ruiz Trescastro" ? (
               <li key={index}>
-                <div />
+                <div
+                  style={{
+                    width: "100px",
+                    height: "100px",
+                    borderRadius: "50%",
+                  }}
+                />
                 <p style={{ fontWeight: "bold", fontSize: "20px" }}>
                   ¡¡¡ENHORABUENA {person.name}!!!
                 </p>
