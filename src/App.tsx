@@ -44,14 +44,37 @@ function App() {
           <div>
             {person.name === "Cristina Ruiz Trescastro" ? (
               <li key={index}>
-                <p>Enhorabuena {person.name} has aprobado</p>
+                <p style={{ fontWeight: "bold", fontSize: "20px" }}>
+                  ¡¡¡ENHORABUENA {person.name}!!!
+                </p>
+                <p style={{ lineHeight: "24px" }}>
+                  Es increíble que ya estemos en ese día tan esperado, temido y
+                  soñado.. Parece que fue ayer cuando tu hermana Mokito
+                  comprobaba que sacabas esos pedazo de 10!!! Y el orgullo que
+                  sentimos todos es enorme, LO HAS LOGRADO! y a pesar de todo.
+                  Desde luego se puede decir que todo en la vida nos aporta algo
+                  y tú, ante esa adversidad allá por el 2015 supiste crecer como
+                  nadie, es para sentirse orgullosa. Lo que hoy pase ahí dentro
+                  es solo un pasito más. Obviamente importante y nos imaginamos
+                  lo nerviosa que puedes estar pero confía en ti, en la buena
+                  cabeza que siempre has tenido y esto no es una excepción. Te
+                  queremos mucho muchas personas a las que cuidas cada día y de
+                  las que estás pendiente, pese a la distancia, a tu poca
+                  disponibilidad horaria para hablar, pero siempre encuentras
+                  hueco. Hoy será el comienzo de algo distinto, otra etapa y
+                  seguro que la disfrutas como haces con todo.
+                </p>
+                <p>SUERTE!!!</p>
               </li>
             ) : (
               <li>
-                <p>
-                  ¡Bienvenida! Hace unos años..todo comenzó así. Esperabas un
-                  resultado que te permitiera acceder a lo que querías...así
-                  que, por favor introduce tu DNI y comprobemos cómo acaba esto.
+                <p style={{ fontWeight: "bold", fontSize: "24px" }}>
+                  ¡Bienvenida!
+                </p>
+                <p style={{ lineHeight: "24px" }}>
+                  Hace unos años..todo comenzó así. Esperabas un resultado que
+                  te permitiera acceder a lo que querías...así que, por favor
+                  introduce tu DNI y comprobemos cómo acaba esto.
                 </p>
               </li>
             )}
@@ -65,8 +88,6 @@ function App() {
     <div className="App">
       <Header />
       <main className="container">
-        <ul>{renderList()}</ul>
-
         <form className="c-input-search">
           <input
             className="c-input-search__input"
@@ -82,6 +103,7 @@ function App() {
             Buscar
           </button>
         </form>
+        <ul>{renderList()}</ul>
       </main>
     </div>
   );

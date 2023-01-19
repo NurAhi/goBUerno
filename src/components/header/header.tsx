@@ -2,13 +2,15 @@ import logo from "../../assets/images/escudo.png";
 
 export const Header: React.FC = () => (
   <header className="c-header">
-    <div className="first-div">
-      <div className="point" />
-    </div>
-    <div className="second-div">
-      <div className="red-div" />
-      <div className="yellow-div" />
-      <div className="red-div" />
+    <div style={{ display: "flex", flexDirection: "row" }}>
+      <div className="first-div">
+        <div className="point" />
+      </div>
+      <div className="second-div">
+        <div className="red-div" />
+        <div className="yellow-div" />
+        <div className="red-div" />
+      </div>
     </div>
     <img className="c-header__image" alt="logo-bu" src={logo}></img>
     <h3 className="c-header__text">
