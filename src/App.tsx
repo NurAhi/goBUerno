@@ -24,23 +24,35 @@ function App() {
     setFoundPerson(foundCristi);
   };
 
+  const resetButton = () => {
+    setSearchInput("");
+  };
+
   const renderList = () => {
     if (
-      foundPerson.length === 0 &&
-      foundPerson.name !== "Cristina Ruiz Trescastro"
+      foundPerson?.length === 0 &&
+      foundPerson?.name !== "Cristina Ruiz Trescastro"
     ) {
-      return <li>no hay nadie con estos datos</li>;
+      return (
+        <li>
+          <p>no hay nadie con estos datos</p>
+        </li>
+      );
     } else {
-      return foundPerson.map((person: any, index: number) => {
+      return foundPerson?.map((person: any, index: number) => {
         return (
           <div>
             {person.name === "Cristina Ruiz Trescastro" ? (
-              <li key={index}>Enhorabuena {person.name} has aprobado</li>
+              <li key={index}>
+                <p>Enhorabuena {person.name} has aprobado</p>
+              </li>
             ) : (
               <li>
-                ¡Bienvenida! Hace unos años..todo comenzó así. Esperabas un
-                resultado que te permitiera acceder a lo que querías...así que,
-                por favor introduce tu DNI y comprobemos cómo acaba esto.
+                <p>
+                  ¡Bienvenida! Hace unos años..todo comenzó así. Esperabas un
+                  resultado que te permitiera acceder a lo que querías...así
+                  que, por favor introduce tu DNI y comprobemos cómo acaba esto.
+                </p>
               </li>
             )}
           </div>
@@ -54,6 +66,7 @@ function App() {
       <Header />
       <main className="container">
         <ul>{renderList()}</ul>
+
         <form className="c-input-search">
           <input
             className="c-input-search__input"
