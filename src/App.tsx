@@ -3,6 +3,8 @@ import "./App.css";
 
 import data from "./data/data.json";
 import { Header } from "./components/header";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Comments } from "./components/comments";
 
 function App() {
   const [searchInput, setSearchInput] = useState("");
@@ -120,6 +122,15 @@ function App() {
           </button>
         </form>
         <ul>{renderList()}</ul>
+        <div>
+          <a href="/comentarios">Ir a comentarios</a>
+        </div>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" />
+            <Route path="/comentarios" element={<Comments />} />
+          </Routes>
+        </BrowserRouter>
       </main>
     </div>
   );
