@@ -123,7 +123,9 @@ function App() {
         </form>
         <ul>{renderList()}</ul>
         <div>
-          <a href="/comentarios">Ir a comentarios</a>
+          <a target="_self" href="/comentarios">
+            Ir a comentarios
+          </a>
         </div>
         <BrowserRouter>
           <Routes>
