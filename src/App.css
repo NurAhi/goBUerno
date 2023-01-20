@@ -23,6 +23,14 @@
   justify-content: space-evenly;
   align-items: center;
   color: white;
+  padding: 1.25rem;
+}
+
+@media (min-width: 600px) {
+  .c-header {
+    justify-content: start;
+    padding-left: 40px;
+  }
 }
 
 .header__text {
@@ -177,4 +185,13 @@ li {
 }
 ul {
   padding: 0;
+}
+
+.c-image {
+  background-image: url("../src/assets/images/cris.jpeg");
+  background-position: inherit;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
