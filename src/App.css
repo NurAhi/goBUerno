@@ -19,7 +19,6 @@
   background-color: #edca1fff;
   height: 100px;
   display: flex;
-  gap: 20px;
   justify-content: space-evenly;
   align-items: center;
   color: white;
@@ -30,6 +29,7 @@
   .c-header {
     justify-content: start;
     padding-left: 40px;
+    gap: 20px;
   }
 }
 
@@ -39,8 +39,10 @@
 
 .separation {
   height: 4.125rem;
-  width: 1px;
+  width: 3.5px;
   background-color: white;
+  margin-left: 2px;
+  margin-right: 8px;
 }
 
 .App-link {
