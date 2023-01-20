@@ -25,6 +25,10 @@
   color: white;
 }
 
+.header__text {
+  text-transform: capitalize;
+}
+
 .separation {
   height: 4.125rem;
   width: 1px;
