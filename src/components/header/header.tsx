@@ -1,8 +1,13 @@
 import logo from "../../assets/images/escudo.png";
+import { Link } from "react-router-dom";
 
 export const Header: React.FC = () => (
   <header className="c-header">
-    <div style={{ display: "flex", flexDirection: "row" }}>
+    <Link
+      to="/goBUerno"
+      relative="path"
+      style={{ display: "flex", flexDirection: "row" }}
+    >
       <div className="first-div">
         <div className="point" />
       </div>
@@ -11,8 +16,8 @@ export const Header: React.FC = () => (
         <div className="yellow-div" />
         <div className="red-div" />
       </div>
-    </div>
-    <img className="c-header__image" alt="logo-bu" src={logo}></img>
+      <img className="c-header__image" alt="logo-bu" src={logo}></img>
+    </Link>
     <div className="c-header-wrapper-text">
       <h3 className="c-header__text" style={{ fontWeight: "bold" }}>
         GO<strong className="black">BU</strong>ERNO DE EZPAÑA

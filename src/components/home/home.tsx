@@ -6,6 +6,7 @@ import { Header } from "../../components/header";
 import { Congrats } from "../congrats/congrats";
 import { Welcome } from "../welcome";
 import { DniForm } from "../dni-form";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   const [searchInput, setSearchInput] = useState("");
@@ -84,9 +85,10 @@ export const Home = () => {
             marginTop: "150px",
           }}
         >
-          <a
+          <Link
             target="_self"
-            href="/goBUerno/comentarios"
+            to="/goBUerno/comentarios"
+            relative="path"
             style={{
               textDecoration: "none",
               fontWeight: "bold",
@@ -94,7 +96,7 @@ export const Home = () => {
             }}
           >
             Ver comentarios 📝
-          </a>
+          </Link>
         </div>
       </main>
     </div>

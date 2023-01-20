@@ -67,7 +67,14 @@ const WriteComment = () => {
         </button>
         {comments &&
           comments?.map((name, i) => (
-            <div key={i} style={{ backgroundColor: "lightgrey", margin: "20px" border: '1px solid grey' }}>
+            <div
+              key={i}
+              style={{
+                backgroundColor: "lightgrey",
+                margin: "20px",
+                border: "1px solid grey",
+              }}
+            >
               <p>{name.name}</p>
               <p>{name.text}</p>
             </div>
