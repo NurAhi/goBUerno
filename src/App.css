@@ -23,6 +23,15 @@
   align-items: center;
   color: white;
   padding: 1.25rem;
+  gap: 10px;
+}
+
+.c-header-wrapper-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
 }
 
 @media (min-width: 600px) {
@@ -39,10 +48,8 @@
 
 .separation {
   height: 4.125rem;
-  width: 3.5px;
+  width: 2.5px;
   background-color: white;
-  margin-left: 2px;
-  margin-right: 8px;
 }
 
 .App-link {

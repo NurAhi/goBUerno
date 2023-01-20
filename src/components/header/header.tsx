@@ -13,12 +13,14 @@ export const Header: React.FC = () => (
       </div>
     </div>
     <img className="c-header__image" alt="logo-bu" src={logo}></img>
-    <h3 className="c-header__text" style={{ fontWeight: "bold" }}>
-      GO<strong className="black">BU</strong>ERNO DE EZPAÑA
-    </h3>
-    <div className="separation" />
-    <h3 className="c-header__text" style={{ fontWeight: "bold" }}>
-      <strong className="black">MIR</strong>ISTERIO
-    </h3>
+    <div className="c-header-wrapper-text">
+      <h3 className="c-header__text" style={{ fontWeight: "bold" }}>
+        GO<strong className="black">BU</strong>ERNO DE EZPAÑA
+      </h3>
+      <div className="separation" />
+      <h3 className="c-header__text" style={{ fontWeight: "bold" }}>
+        <strong className="black">MIR</strong>ISTERIO
+      </h3>
+    </div>
   </header>
 );
