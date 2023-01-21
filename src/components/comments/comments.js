@@ -48,7 +48,7 @@ const WriteComment = () => {
     <>
       <Header />
       <div style={{ padding: "20px" }}>
-        <Link to="/goBUerno" relative="path" className="c-button">
+        <Link to="/goBUerno" relative="path" className="c-button__back">
           Volver atrás
         </Link>
         <h2 className="">Deja aquí tu comentario 🥰</h2>
@@ -62,7 +62,7 @@ const WriteComment = () => {
           />
         </div>
         <textarea
-          className="form__input"
+          className="form__input-text"
           type="text"
           placeholder="¿Qué te gustaría dedicarle?"
           value={text}
@@ -73,16 +73,9 @@ const WriteComment = () => {
         </button>
         {comments &&
           comments?.map((name, i) => (
-            <div
-              key={i}
-              style={{
-                backgroundColor: "lightgrey",
-                margin: "20px",
-                border: "1px solid grey",
-              }}
-            >
-              <p>{name.name}</p>
-              <p>{name.text}</p>
+            <div className="c-comments" key={i} style={{}}>
+              <p className="c-coments__title">{name.name}</p>
+              <p className="c-coments__text">{name.text}</p>
             </div>
           ))}
       </div>

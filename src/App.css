@@ -234,22 +234,134 @@ ul {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  width: 100%;
 }
 
 .c-button:hover,
 .c-button:focus {
-  background-color: #f082ac;
+  background-color: #020773ff;
 }
 
 .form__input {
   font-family: "Roboto", sans-serif;
   color: #333;
   font-size: 16px;
-  margin: 0 20px;
-  padding: 1.5rem 2rem;
+  margin: 0;
   border-radius: 0.2rem;
   background-color: white;
-  width: 90%;
+  width: 100%;
   display: block;
+  height: 30px;
+  margin-bottom: 20px;
   border: solid 0.5 rgb(204, 202, 202);
+}
+.form__input::-webkit-input-placeholder {
+  padding-top: 15px;
+  padding-left: 5px;
+}
+.form__input::-moz-placeholder {
+  padding-top: 15px;
+  padding-left: 5px;
+}
+.form__input:-ms-input-placeholder {
+  padding-top: 15px;
+  padding-left: 5px;
+}
+.form__input::-ms-input-placeholder {
+  padding-top: 15px;
+  padding-left: 5px;
+}
+.form__input::placeholder {
+  padding-top: 15px;
+  padding-left: 5px;
+}
+
+.form__input-text {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  font-size: 16px;
+  margin: 0;
+  border-radius: 0.2rem;
+  background-color: white;
+  width: 100%;
+  display: block;
+  height: 200px;
+  margin-bottom: 20px;
+  border: solid 0.5 rgb(204, 202, 202);
+}
+
+.form__input-text::-webkit-input-placeholder {
+  padding-top: 15px;
+  padding-left: 5px;
+}
+.form__input-text::-moz-placeholder {
+  padding-top: 15px;
+  padding-left: 5px;
+}
+.form__input-text:-ms-input-placeholder {
+  padding-top: 15px;
+  padding-left: 5px;
+}
+.form__input-text::-ms-input-placeholder {
+  padding-top: 15px;
+  padding-left: 5px;
+}
+.form__input-text::placeholder {
+  padding-top: 15px;
+  padding-left: 5px;
+}
+
+.c-button__back {
+  background-color: #020773ff;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.c-button__back:hover,
+.c-button__back:focus {
+  background-color: #edca1fff;
+}
+
+.c-comments {
+  border: rgb(204, 202, 202) 1px solid;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 15px;
+  box-shadow: 0px 0px 3px 1px rgb(80 30 150 / 10%);
+}
+
+.c-coments__title {
+  font-weight: bold;
+  font-size: 12px;
+  color: #757474;
+}
+
+.c-coments__text {
+  font-size: 16px;
+  color: #414141;
 }
