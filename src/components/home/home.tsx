@@ -18,41 +18,41 @@ export const Home = () => {
     },
   ]);
 
-  const doctorSearch = () => {
-    if (searchInput === null) return;
+  const foundCristi = data.filter((user) => {
+    return user.dni.toLowerCase().includes(searchInput.toLowerCase());
+  });
 
-    const foundCristi = data.filter((user) => {
-      return user.dni.toLowerCase().includes(searchInput.toLowerCase());
-    });
+  const doctorSearch = (e: any) => {
+    e.preventDefault();
+
+    if (searchInput !== "72752721H") {
+      alert("DNI erroneo, vuelve a intentar 🫣");
+    }
 
     setFoundPerson(foundCristi);
   };
 
+  const handleOnChange = (e: any) => {
+    setSearchInput(e.target.value);
+  };
+
   const renderList = () => {
-    if (searchInput !== "72752721H") {
+    return foundPerson?.map((person: any, index: number) => {
       return (
-        <li>
-          <p>No hay nadie con estos datos</p>
-        </li>
+        <div>
+          {person.dni === "72752721H" ? (
+            <li key={index}>
+              <div className="c-image" />
+              <Congrats person={person} />
+            </li>
+          ) : (
+            <li>
+              <Welcome />
+            </li>
+          )}
+        </div>
       );
-    } else {
-      return foundPerson?.map((person: any, index: number) => {
-        return (
-          <div>
-            {searchInput === "72752721H" ? (
-              <li key={index}>
-                <div className="c-image" />
-                <Congrats person={person} />
-              </li>
-            ) : (
-              <li>
-                <Welcome />
-              </li>
-            )}
-          </div>
-        );
-      });
-    }
+    });
   };
 
   return (
@@ -67,7 +67,11 @@ export const Home = () => {
           height: "100%",
         }}
       >
-        <DniForm setSearchInput={setSearchInput} doctorSearch={doctorSearch} />
+        <DniForm
+          doctorSearch={doctorSearch}
+          searchInput={searchInput}
+          handleOnChange={handleOnChange}
+        />
         <ul>{renderList()}</ul>
         <div
           style={{

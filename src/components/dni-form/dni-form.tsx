@@ -1,15 +1,16 @@
-export const DniForm = ({ setSearchInput, doctorSearch }: any) => (
+export const DniForm = ({ handleOnChange, doctorSearch, SearchInput }: any) => (
   <form className="c-input-search">
     <input
       className="c-input-search__input"
       type="search"
-      onChange={(e) => setSearchInput(e.target.value)}
+      onChange={handleOnChange}
       placeholder="Comprueba tu DNI"
+      value={SearchInput}
     />
     <button
       className="c-input-search__button"
-      type="button"
-      onClick={() => doctorSearch()}
+      type="submit"
+      onClick={doctorSearch}
     >
       Buscar
     </button>
