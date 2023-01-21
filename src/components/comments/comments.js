@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { collection, addDoc, getDocs } from "firebase/firestore";
 import { db } from "../../firebase";
 import { Header } from "../header";
+import { Link } from "react-router-dom";
 
 const WriteComment = () => {
   const [name, setName] = useState("");
@@ -22,6 +23,7 @@ const WriteComment = () => {
     } catch (e) {
       console.error("Error adding document: ", e);
     }
+    alert("Comentario creado correctamente 🫣");
 
     setName("");
     setText("");
@@ -35,34 +37,38 @@ const WriteComment = () => {
       }));
 
       setComments(newData);
-      console.log(comments, newData);
     });
   };
 
   useEffect(() => {
     fetchPost();
-    setComments();
   }, []);
 
-  console.log(comments, "array");
   return (
     <>
       <Header />
-      <div>
-        <h1 className="font-semibold text-lg">Deja aquí tu comentario 🥰</h1>
-        <textarea
-          type="text"
-          placeholder="¿Qué te gustaría dedicarle?"
-          onChange={(e) => setText(e.target.value)}
-        />
+      <div style={{ padding: "20px" }}>
+        <Link to="/goBUerno" relative="path" className="c-button">
+          Volver atrás
+        </Link>
+        <h2 className="">Deja aquí tu comentario 🥰</h2>
         <div>
           <input
+            className="form__input"
             type="text"
             placeholder="Pon aquí tu Nombre"
             onChange={(e) => setName(e.target.value)}
+            value={name}
           />
         </div>
-        <button type="submit" onClick={addComment} className="">
+        <textarea
+          className="form__input"
+          type="text"
+          placeholder="¿Qué te gustaría dedicarle?"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
+        <button type="submit" onClick={addComment} className="c-button">
           Guardar
         </button>
         {comments &&

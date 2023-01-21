@@ -29,10 +29,7 @@ export const Home = () => {
   };
 
   const renderList = () => {
-    if (
-      foundPerson?.length === 0 &&
-      foundPerson?.name !== "Cristina Ruiz Trescastro"
-    ) {
+    if (foundPerson?.length === 0 && foundPerson?.dni === "72752721H") {
       return (
         <li>
           <p>No hay nadie con estos datos</p>
@@ -42,8 +39,7 @@ export const Home = () => {
       return foundPerson?.map((person: any, index: number) => {
         return (
           <div>
-            {person.name === "Cristina Ruiz Trescastro" ||
-            searchInput !== "" ? (
+            {person.name === "Cristina Ruiz Trescastro" ? (
               <li key={index}>
                 <div className="c-image" />
                 <Congrats person={person} />
