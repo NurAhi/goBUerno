@@ -25,7 +25,7 @@ export const Home = () => {
   const doctorSearch = (e: any) => {
     e.preventDefault();
 
-    if (searchInput !== "72752721H") {
+    if (searchInput.toUpperCase() !== "72752721H") {
       alert("DNI erroneo, vuelve a intentar 🫣");
     }
 
