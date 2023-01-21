@@ -249,31 +249,26 @@ ul {
   margin: 0;
   border-radius: 0.2rem;
   background-color: white;
-  width: 100%;
+  width: 97%;
   display: block;
   height: 30px;
   margin-bottom: 20px;
   border: solid 0.5 rgb(204, 202, 202);
 }
 .form__input::-webkit-input-placeholder {
-  padding-top: 15px;
-  padding-left: 5px;
+  padding: 5%;
 }
 .form__input::-moz-placeholder {
-  padding-top: 15px;
-  padding-left: 5px;
+  padding: 5%;
 }
 .form__input:-ms-input-placeholder {
-  padding-top: 15px;
-  padding-left: 5px;
+  padding: 5%;
 }
 .form__input::-ms-input-placeholder {
-  padding-top: 15px;
-  padding-left: 5px;
+  padding: 5%;
 }
 .form__input::placeholder {
-  padding-top: 15px;
-  padding-left: 5px;
+  padding: 5%;
 }
 
 .form__input-text {
@@ -283,7 +278,7 @@ ul {
   margin: 0;
   border-radius: 0.2rem;
   background-color: white;
-  width: 100%;
+  width: 97%;
   display: block;
   height: 200px;
   margin-bottom: 20px;
@@ -291,24 +286,19 @@ ul {
 }
 
 .form__input-text::-webkit-input-placeholder {
-  padding-top: 15px;
-  padding-left: 5px;
+  padding: 5%;
 }
 .form__input-text::-moz-placeholder {
-  padding-top: 15px;
-  padding-left: 5px;
+  padding: 5%;
 }
 .form__input-text:-ms-input-placeholder {
-  padding-top: 15px;
-  padding-left: 5px;
+  padding: 5%;
 }
 .form__input-text::-ms-input-placeholder {
-  padding-top: 15px;
-  padding-left: 5px;
+  padding: 5%;
 }
 .form__input-text::placeholder {
-  padding-top: 15px;
-  padding-left: 5px;
+  padding: 5%;
 }
 
 .c-button__back {
